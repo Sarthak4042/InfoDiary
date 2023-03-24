@@ -1,0 +1,1007 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Fira Sans', sans-serif; */
+    /* color: black; */
+    /* background-color: black;   */
+    /* width: auto; */
+}
+
+
+
+
+
+
+.secondhalf {
+    background: url(city.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 700px;
+    animation: change 40s infinite ;
+    width: 1575px;
+    top: 100px;
+}
+
+@keyframes change{
+    0%
+    {
+        background-image: url(logo.png);
+    }
+    20%
+    {
+        background-image: url(logo.png);
+    }
+    40%
+    {
+        background-image: url(flag.png);
+    }
+    60%
+    {
+        background-image: url(man-mask.png);
+    }
+    80%
+    {
+        background-image: url(newtravel.png);
+    }
+    100%
+    {
+        background-image: url(location.png);
+    }
+}
+
+body {
+    background-color: #AFDBF5;
+    overflow-x: hidden; 
+    /* min-height: 100vh; */
+    /* max-height: 4500px; */
+    
+}
+
+header {
+    background-color: royalblue;
+    height: 80px;
+    width: 1575px;
+    /* text-align: center; */
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 142px;
+    padding-right: 142px;
+}
+
+header nav h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Segoe UI BLACK';
+    color: aliceblue;
+    position: relative; left: 0px;
+    /* top: 20px; */
+    /* font-family: 'PACIFICO'; */
+}
+
+.info{
+    background-color: royalblue;
+    height: 50px;
+    width: 1575px;
+}
+
+.info p{
+    font-family: 'Segoe UI BLACK';
+    color: aliceblue;
+    position: relative; left: 100px;
+    font-size: 30px;
+    top: 5px;
+}
+
+.cafe{
+    background-color: aliceblue;
+    top: 30px;
+    height: 230px;
+}
+
+.alibaba{
+    height: 200px;
+    position: relative;
+    left: 30px;
+    top: 10px;
+    width: 500px;
+}
+
+.cafe h1{
+    position: relative;
+    left: 550px;
+    top: -180px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.rating{
+    position: relative;
+    left: 550px;
+    top: -175px;
+}
+
+.address{
+    font-family: 'Arial';
+    position: relative;
+    left: 570px;
+    top: -170px;
+}
+
+.search{
+    height: 40px;
+    width: 200px;
+    position: relative;
+    left: 550px;
+    top: -160px;
+    background-color: #008000;
+    color: azure;
+    font-family: 'Segoe UI BLACK';
+    border: none;
+}
+
+.fa-solid {
+    position: relative;
+    left: 460px;
+    top: -123px;
+}
+
+.price{
+    font-family: 'Arial';
+    position: relative;
+    left: 550px;
+    top: -150px;
+}
+
+.rat{
+    font-family: 'Arial';
+    position: relative;
+    left: 680px;
+    top: -170px;
+}
+
+.fa-phone{
+    position: relative;
+    left: 800px;
+    top: -230px;
+}
+
+.number{
+    position: relative;
+    left: 830px;
+    font-family: 'Arial';
+    top: -250px;
+}
+
+.time{
+    position: relative;
+    left: 800px;
+    font-family: 'Arial';
+    top: -230px;
+}
+
+.fa-location-dot{
+    position: relative;
+    left: 550px;
+    top: -345px;
+}
+
+/* .alibaba:hover{
+    /* -ms-transform: scale(1.5); /* IE 9 */
+    /* -webkit-transform: scale(1.5); Safari 3-8 */ 
+    /* transform: scale(1.5); 
+    position: relative; */
+/* } */
+
+.book{
+    height: 40px;
+    width: 200px;
+    position: relative;
+    left: 1000px;
+    top: -280px;
+    color: aliceblue;
+    background-color: royalblue;
+    border: none;
+    font-family: 'Segoe UI BLACK';
+}
+
+.tribe{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.social{
+    height: 200px;
+    position: relative;
+    left: 30px;
+    top: 10px;
+    width: 500px;
+}
+
+.tribe h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.tribenum{
+    top: -290px;
+    font-family: 'Arial';
+    position: relative;
+    left: 830px;
+}
+
+/* .tribesocial:hover{
+    transform: scale(1.5); 
+    position: relative;
+} */
+
+.khao{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.khao h1{
+    position: relative;
+    left: 570px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.pizza{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.pizza h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.britania{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.britania h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.bbc{
+    background-color: aliceblue;
+    top: 50px;
+    height: 260px;
+}
+
+.bbc h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.sodabottle{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.sodabottle h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.irish{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.irish h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.poptates{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.poptates h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.persian{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.persian h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+    overflow: hidden;
+    /* overflow-y: hidden; */
+    /* position: relative; */
+    /* left: 200px; */
+}
+  
+  /* Modal Content */
+.modal-content {
+    background-color: aliceblue;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: royalblue;
+    font-family: 'Arial';
+    /* overflow: hidden; */
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close p{
+    color: royalblue;
+    font-family: 'Segoe UI BLACK';
+    font-size: 30px;
+    /* position: relative; */
+    /* left: 150px; */
+}
+
+.pos{
+    position: relative;
+    left: 500px;
+    top: -65px;
+}
+
+#timeslots{
+    position: relative;
+    left: 500px;
+    top: -55px;
+    height: 50px;
+    width: 450px;
+    font-size: 20px;
+    color: royalblue;
+}
+
+#customername{
+    position: relative;
+    height: 50px;
+    width: 450px;
+    font-size: 20px;
+    color: royalblue;
+}
+
+.date{
+    font-size: 20px;
+    color: royalblue;
+    position: relative;
+    top: 30px;
+}
+
+.mytable{
+    width: 400px;
+    height: 50px;
+    color: aliceblue;
+    background-color: royalblue;
+    border: none;
+    font-family: 'Segoe UI BLACK';
+    position: relative;
+    left: 250px;
+    top: 10px;
+}
+
+#peoples{
+    height: 50px;
+    width: 45px;
+    font-size: 20px;
+    color: royalblue;
+    position: relative;
+}
+
+.dat{
+    position: relative;
+    top: 25px;
+}
+
+.pot{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.pot h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.three{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.three h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.coriander{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.coriander h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.ukiyo{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.ukiyo h1{
+    position: relative;
+    left: 550px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.yellow{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.yellow h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.atrangi{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.atrangi h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.tiara{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.tiara h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.lake{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.lake h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.sunken{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.sunken h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.tra{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.tra h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.seven{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.seven h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.jyran{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+  
+.jyran h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.peshwa{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.peshwa h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.baluchi{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.baluchi h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.namak{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.namak h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.tiqri{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.tiqri h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.region{
+    background-color: royalblue;
+    height: 50px;
+    width: 1575px;
+}
+
+.region h1{
+    font-family: 'Segoe UI BLACK';
+    color: aliceblue;
+    position: relative; left: 450px;
+    font-size: 30px;
+    top: 5px;
+}
+
+.level{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.level h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+
+}
+
+.malaka{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.malaka h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.little{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.little h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.savya{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.savya h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.baan{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.baan h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.sorriso{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.sorriso h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.alto{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.alto h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.le{
+    background-color: aliceblue;
+    top: 50px;
+    height: 230px;
+}
+
+.le h1{
+    position: relative;
+    left: 560px;
+    top: -190px;
+    font-family: 'Segoe UI BLACK';
+}
+
+.checked {
+    color: orange;
+    /* position: relative;
+    left: 550px;
+    top: -175px; */
+  }
+
+.fa-star{
+    position: relative;
+    left: 560px;
+    top: -182px;
+}
+.feedback{
+    background-color: rgb(193, 221, 247);
+    top: 50px;
+    height: 630px;
+}
+
+.feedback h1{
+    position: relative;
+    left: 420px;
+    top: 50px;
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+}
+
+.feedback h2{
+    position: relative;
+    left: 600px;
+    font-size: 30px;
+    top: 50px;
+}
+
+.feedback h3{
+    position: relative;
+    left: 675px;
+    top: 80px;
+    font-size: 28px;
+}
+
+.feedback select{
+    position: relative;
+    left: 550px;
+    top: 85px;
+    width: 400px;
+    height: 50px;
+    font-family: 'Arial';
+    font-size: 20px;
+    padding-left: 140px;
+    border: none;
+}
+
+.feedback h4{
+    position: relative;
+    left: 550px;
+    top: 110px;
+    font-size: 28px;
+}
+
+.feedback input{
+    display: none;
+}
+
+.feedback label{
+    font-size: 30px;
+    color: #444;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+
+input:checked ~ label{
+    color: #fd4;
+}
+
+input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+.feedback label{
+    position: relative;
+    left: -675px;
+    top: 120px;
+}
+
+.feedback h5{
+    font-size: 28px;
+    position: relative;
+    left: 500px;
+    top: 180px;
+}
+
+.feedback textarea{
+    position: relative;
+    left: 500px;
+    top: 195px;
+    width: 600px;
+    font-family: 'Arial';
+    font-size: 20px;
+}
+
+.footer{
+    /* background: #0D2C54; */
+    background: #0A1948;
+    width: 100%;
+    height: 18em;
+    display: flex;
+    justify-content:space-around;
+    position: relative;
+    top: 0px;
+}
+
+.foot1{
+    border-right: solid 1px #6D7275;
+    margin-left: 8%;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+.foot1_logo{
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #FAFAFF;
+    margin: 1em 0em .5em 0em;
+}
+
+.foot1_text{
+    color: #B0C6CE;
+    width: 20em;
+    margin: 0em 2em 0em 0em;
+}
+
+.foot1 .social a{ 
+    height: 40px;
+    width: 40px;
+    margin: 30px 2px 16px 2px;
+    text-decoration: none;
+    color: #FAFAFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #666A86;
+    border-radius: 50%;
+
+}
+
+.foot2{
+    border-right: solid 1px #6D7275;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 30%;
+
+}
+
+.foot2_title{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #FAFAFF;
+    margin: 2.5em 0em 1em 0em;
+}
+
+
+.foot2_helpful_links li{
+    list-style-type: none;
+    text-align: center;
+    margin: .6em 0em;
+}
+
+.foot2_helpful_links li a{
+    text-decoration: none;
+    color: #B0C6CE;
+}
+
+.foot3_title{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #FAFAFF;
+    margin: 2.5em 0em 1em 5em;
+}
+
+.foot2{
+    font-family: 'Inter', sans-serif;
+}
+.foot3_content{
+    display: flex;
+    flex-direction: column;
+    color: #B0C6CE;
+    margin: 0em 0em 0em 5em;
+    width: 50%;
+}
+
+.foot3_content li{
+    list-style-type: none;
+    margin-left: 1em;
+}
+
+.foot3_content1{
+    display: flex;
+}
+.foot3_content2{
+    display: flex;
+    color: #00A5E0;
+    margin: 1em 0em;
+}
+.foot3_content3{
+    display: flex;
+    margin-top: 1em;
+}
+

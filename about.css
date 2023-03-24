@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    /* color: black; */
+    /* background-color: black;   */
+    /* width: auto; */
+}
+
+:root {
+    height: 50vh;
+}
+
+html {
+    height: 100%;
+}
+
+
+
+.secondhalf {
+    background: url(city.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 500px;
+    animation: change 40s infinite ease-in-out;
+    top: 100px;
+}
+
+@keyframes change{
+    0%
+    {
+        background-image: url(logo.png);
+    }
+    20%
+    {
+        background-image: url(logo.png);
+    }
+    40%
+    {
+        background-image: url(flag.png);
+    }
+    60%
+    {
+        background-image: url(man-mask.png);
+    }
+    80%
+    {
+        background-image: url(newtravel.png);
+    }
+    100%
+    {
+        background-image: url(location.png);
+    }
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+    /* min-height: 100vh; */
+    max-height: fit-content;
+}
+
+header {
+    background-color: royalblue;
+    height: 80px;
+    /* text-align: center; */
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 142px;
+    padding-right: 142px;
+}
+
+header nav h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Segoe UI BLACK';
+    color: aliceblue;
+    /* top: 20px; */
+    /* font-family: 'PACIFICO'; */
+}
+
+.services button{
+    height: 400px;
+    background: url(ac.png) ;
+    position: relative; left: 150px;
+    width: 500px;
+    top: 20px;
+    border-radius: 40px;
+}
+
+.services h1{
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    top: 30px;
+    position: relative; left: 150px;
+}
+
+.services button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.auto button {
+    height: 400px;
+    background: url(newrepair.png) ;
+    position: relative; left: 800px;
+    width: 500px;
+    top: -430px;
+    border-radius: 40px;
+}
+
+.auto h1 {
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    top: -420px;
+    position: relative; left: 900px;
+}
+
+.auto button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.education button {
+    height: 400px;
+    background: url(educate.png) ;
+    /* position: relative; left: 755px; */
+    width: 500px;
+    position: relative; left: 150px;
+    top: -400px;
+    border-radius: 40px;
+}
+
+.education h1 {
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    top: -400px;
+    position: relative; left: 200px;
+}
+
+.education button:hover {
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.travelling button {
+    height: 400px;
+    background: url(travelling.png) ;
+    position: relative; left: 800px;
+    width: 500px;
+    top: -850px;
+    border-radius: 40px;
+}
+
+.travelling h1 {
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 1000px;
+    top: -850px;
+}
+
+.travelling button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.food button {
+    height: 400px;
+    background: url(ordering.png) ;
+    /* position: relative; left: 755px; */
+    width: 500px;
+    position: relative; left: 150px;
+    top: -850px;
+    border-radius: 40px;
+}
+
+
+.food h1 {
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 275px;
+    top: -850px;
+}
+
+.food button:hover {
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.phone button {
+    height: 400px;
+    background: url(phone.png) ;
+    position: relative; left: 800px;
+    width: 500px;
+    top: -1300px;
+    border-radius: 40px;
+}
+
+.phone h1 {
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 670px;
+    top: -1300px;
+}
+
+.phone button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.real button {
+    height: 400px;
+    background: url(estate.png) ;
+    /* position: relative; left: 755px; */
+    width: 500px;
+    position: relative; left: 150px;
+    top: -1290px;
+    border-radius: 40px;
+}
+
+.real h1 {
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 250px;
+    top: -1290px;
+}
+
+.real button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.medical button {
+    height: 400px;
+    background: url(medical.png) ;
+    position: relative; left: 800px;
+    width: 500px;
+    top: -1740px;
+    border-radius: 40px;
+}
+
+.medical h1 {
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 930px;
+    top: -1740px;
+}
+
+.medical button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.fitness button{
+    height: 400px;
+    background: url(fitness.png) ;
+    /* position: relative; left: 755px; */
+    width: 500px;
+    position: relative; left: 150px;
+    top: -1720px;
+    border-radius: 40px;
+}
+
+.fitness h1{
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 300px;
+    top: -1720px;
+}
+
+.fitness button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.personal button{
+    height: 400px;
+    background: url(personal.png) ;
+    position: relative; left: 800px;
+    width: 500px;
+    top: -2170px;
+    border-radius: 40px;
+}
+
+.personal h1{
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 950px;
+    top: -2170px;
+}
+
+.personal button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.daily button{
+    height: 400px;
+    background: url(daily.png) ;
+    /* position: relative; left: 755px; */
+    width: 500px;
+    position: relative; left: 150px;
+    top: -2150px;
+    border-radius: 40px;
+}
+
+.daily button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.daily h1{
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 250px;
+    top: -2140px;
+}
+
+.flowers button{
+    height: 400px;
+    background: url(flowers.png) ;
+    position: relative; left: 800px;
+    width: 500px;
+    top: -2600px;
+    border-radius: 40px;
+}
+
+.flowers button:hover{
+    box-shadow: 0 0 5px royalblue,
+                0 0 25px royalblue,
+                0 0 50px royalblue,
+                0 0 100px royalblue;
+}
+
+.flowers h1{
+    font-family: 'Segoe UI BLACK';
+    font-size: 35px;
+    color: aliceblue;
+    position: relative; left: 1000px;
+    top: -2600px;
+}
+
+
+
+.education img {
+    position: relative; left: 100px;
+    top: 900px;
+}
+
+.end{
+    background-color: blueviolet;
+    color: aliceblue;
+    top: -1500px;
+}
+
+

@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Fira Sans', sans-serif; */
+    /* color: black; */
+    /* background-color: black;   */
+    /* width: auto; */
+}
+
+
+
+
+
+
+.secondhalf {
+    background: url(city.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 700px;
+    animation: change 40s infinite ;
+    width: 1575px;
+    top: 100px;
+}
+
+@keyframes change{
+    0%
+    {
+        background-image: url(LOGO2.png);
+    }
+    20%
+    {
+        background-image: url(logo.png);
+    }
+    40%
+    {
+        background-image: url(flag.png);
+    }
+    60%
+    {
+        background-image: url(man-mask.png);
+    }
+    80%
+    {
+        background-image: url(newtravel.png);
+    }
+    100%
+    {
+        background-image: url(location.png);
+    }
+}
+
+body {
+    background-color: #AFDBF5;
+    overflow-x: hidden; 
+    /* min-height: 100vh; */
+    /* max-height: 4500px; */
+    
+}
+
+header {
+    background-color: royalblue;
+    height: 80px;
+    width: 1575px;
+    /* text-align: center; */
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 142px;
+    padding-right: 142px;
+}
+
+header nav h1 {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Segoe UI BLACK';
+    color: aliceblue;
+    position: relative; left: 0px;
+    /* top: 20px; */
+    /* font-family: 'PACIFICO'; */
+}
+
+.info{
+    background-color: royalblue;
+    height: 50px;
+    width: 1575px;
+}
+
+.info h1{
+    font-family: 'Segoe UI BLACK';
+    color: aliceblue;
+    position: relative; left: 100px;
+    font-size: 30px;
+    top: 5px;
+}
+
+.service{
+    background-color: black;
+    height: 900px;
+}
+
+.repair{
+    background-color: black;
+    height: 700px;
+}
+
+.install{
+    background-color: black;
+    height: 1650px;
+}
+
+.install h1{
+    color: aliceblue;
+    font-family: 'Segoe UI BLACK';
+    font-size: 30px;
+    position: relative;
+    left: 100px;
+    top: 10px;
+}
+
+.repair h1{
+    color: aliceblue;
+    font-family: 'Segoe UI BLACK';
+    font-size: 30px;
+    position: relative;
+    left: 100px;
+    top: 10px;
+}
+
+.service h1{
+    color: aliceblue;
+    font-family: 'Segoe UI BLACK';
+    font-size: 30px;
+    position: relative;
+    left: 100px;
+    top: 10px;
+}
+
+.quote1{
+    position: relative;
+    left: 5px;
+    top: 20px;
+    width: 1515px;
+}
+
+.quote2{
+    position: relative;
+    left: 5px;
+    width: 1515px;
+    /* height: 200px; */
+}
+
+.book{
+    height: 70px;
+    width: 400px;
+    color: aliceblue;
+    background-color: royalblue;
+    position: relative;
+    left: 1000px;
+    top: -290px;
+    font-family: 'Segoe UI BLACK';
+    border: none;
+    font-size: 25px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+    
+    /* position: relative; */
+    /* left: 200px; */
+}
+  
+  /* Modal Content */
+.modal-content {
+    background-color: aliceblue;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: royalblue;
+    font-family: 'Arial';
+    align-items: center;
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -450px;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close p{
+    color: royalblue;
+    font-family: 'Segoe UI BLACK';
+    font-size: 30px;
+    position: relative; 
+    left: 150px; 
+}
+
+ #intro{
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+    position: relative; 
+    left: 250px; 
+} 
+
+.ton{
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+    position: relative; 
+    left: 250px; 
+}
+
+.age{
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+    position: relative; 
+    left: 250px; 
+
+}
+
+.day{
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+    position: relative; 
+    left: 250px; 
+
+}
+
+.pos{
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+    position: relative; 
+    left: 250px; 
+    top: 20px;
+
+}
+
+.address{
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+    position: relative; 
+    left: -620px; 
+    top: 70px;
+}
+
+#size{
+    position: relative;
+    left: 250px;
+    top: 0px;
+    height: 50px;
+    width: 450px;
+    font-size: 20px;
+    color: royalblue;
+}
+
+#old{
+    position: relative;
+    left: 250px;
+    top: 0px;
+    height: 50px;
+    width: 450px;
+    font-size: 20px;
+    color: royalblue;
+}
+
+.date{
+    font-size: 20px;
+    color: royalblue;
+    position: relative;
+    top: 0px;
+    width: 450px;
+    height: 50px;
+    left: 250px;
+}
+
+#timeslots{
+    position: relative;
+    left: 250px;
+    top: 0px;
+    height: 50px;
+    width: 450px;
+    font-size: 20px;
+    color: royalblue;
+}
+
+.myservice{
+    width: 400px;
+    height: 100px;
+    color: aliceblue;
+    background-color: royalblue;
+    border: none;
+    font-family: 'Segoe UI BLACK';
+    position: relative;
+    left: 275px;
+    top: -120px;
+    font-size: 25px;
+}
+
+#address{
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 20px;
+    width: 450px;
+    height: 90px;
+    position: relative;
+    left: 250px;
+    top: 0px;
+    /* border: none; */
+}
+
+
+
+::placeholder{
+    color: royalblue;
+    font-family: 'Arial';
+    font-size: 30px;
+}
+
+.repquo{
+    position: relative;
+    top: 30px;
+    width: 1520px;
+}
+
+.wndrep{
+    width: 1520px;
+}
+
+.splt{
+    width: 1520px;
+    position: relative;
+    top: 30px;
+}
+
+.wndint{
+    width: 1520px;
+    position: relative;
+    top: 30px;
+}
+
+.spltunint{
+    width: 1520px;
+}
+
+.wndunit{
+    width: 1520px;
+}
+
+.footer{
+    /* background: #0D2C54; */
+    background: #0A1948;
+    width: 100%;
+    height: 18em;
+    display: flex;
+    justify-content:space-around;
+    position: relative;
+    top: 10px;
+}
+
+.foot1{
+    border-right: solid 1px #6D7275;
+    margin-left: 8%;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+.foot1_logo{
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #FAFAFF;
+    margin: 1em 0em .5em 0em;
+}
+
+.foot1_text{
+    color: #B0C6CE;
+    width: 20em;
+    margin: 0em 2em 0em 0em;
+}
+
+.foot1 .social a{ 
+    height: 40px;
+    width: 40px;
+    margin: 30px 2px 16px 2px;
+    text-decoration: none;
+    color: #FAFAFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #666A86;
+    border-radius: 50%;
+
+}
+
+.foot2{
+    border-right: solid 1px #6D7275;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 30%;
+
+}
+
+.foot2_title{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #FAFAFF;
+    margin: 2.5em 0em 1em 0em;
+}
+
+
+.foot2_helpful_links li{
+    list-style-type: none;
+    text-align: center;
+    margin: .6em 0em;
+}
+
+.foot2_helpful_links li a{
+    text-decoration: none;
+    color: #B0C6CE;
+}
+
+.foot3_title{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #FAFAFF;
+    margin: 2.5em 0em 1em 5em;
+}
+
+.foot2{
+    font-family: 'Inter', sans-serif;
+}
+.foot3_content{
+    display: flex;
+    flex-direction: column;
+    color: #B0C6CE;
+    margin: 0em 0em 0em 5em;
+    width: 50%;
+}
+
+.foot3_content li{
+    list-style-type: none;
+    margin-left: 1em;
+}
+
+.foot3_content1{
+    display: flex;
+}
+.foot3_content2{
+    display: flex;
+    color: #00A5E0;
+    margin: 1em 0em;
+}
+.foot3_content3{
+    display: flex;
+    margin-top: 1em;
+}
