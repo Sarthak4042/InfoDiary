@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoDiary-Add My Business</title>
+    <link rel="stylesheet" href="business.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <!-- <script src="https://apis.mapmyindia.com/advancedmaps/v1/8bf6e0b630452cf09a356a2f29163b4c/map_load?v=1.5"></script> -->
+</head>
+
+<body>
+
+    <header>
+        <!-- <i class="fa-solid fa-user fa-2x"></i> --> 
+        <nav>
+            <h1>INFODIARY</h1>
+            <img src="LOGO2.png" height="50px" width="80px">
+        </nav>
+    </header>
+
+    <div class="secondhalf"></div>
+
+    <div class="register">
+        <div class="container">
+            <form id="form1">
+                <h2>Fill the details to register your business</h2>
+                <input type="text" placeholder="Enter Your Business Name" id="name" required>
+                <input type="password" placeholder="Enter Password" id="password" required>
+                <input type="password" placeholder="Confirm Password" id="confirm" required>
+
+                <select name="options" id="services" required>
+                    <option value="Air-Conditioner Repairs">Air-Conditioner Repairs</option>
+                    <option value="Car Service Centers">Car Service Centers</option>
+                    <option value="Educational Institutes">Educational Institutes</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Foods and Restaurants">Foods and Restaurants</option>
+                    <option value="Gyms and Fitness Centers">Gyms and Fitness Centers</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Groceries">Groceries</option>
+                    <option value="Hospitals">Hospitals</option>
+                </select>
+
+                <button type="submit" id="next1">Press To Continue</button>
+            </form>
+
+
+            <form id="form2">
+                <h2>One step closer registering your business!!</h2>
+                <input type="text" placeholder="Enter address of your business" id="address" required>
+                <!-- <input type="password" placeholder="Enter Password"> -->
+                <!-- <input type="password" placeholder="Confirm Password"> -->
+                <input type="text" placeholder="Enter pincode of your business" id="pincode" required>
+
+                <select name="city" id="city">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Nashik">Nashik</option>
+                </select>
+
+                <button type="submit" id="next2">Press To Continue</button>
+            </form>
+
+            <form id="form3">
+                <h2>Almost done registering your business!!</h2>
+                <input type="text" placeholder="Enter name of the owner" required>
+                <input type="password" placeholder="Create Password">
+                <!-- <input type="password" placeholder="Confirm Password"> -->
+                <input type="text" placeholder="Enter contact number of owner" required>
+
+                <!-- <select name="city" id="options">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Nashik">Nashik</option>
+                </select> -->
+
+                <button type="submit" id="next3">Press To Continue</button>
+            </form>
+
+            <form id="form4">
+                <h2>One last step to get your business going!!</h2>
+                <label for="ownerid" id="ownerid">Upload owner's photo ID proof</label>
+                <input type="file" placeholder="Upload owner's photo ID proof" name="ownerid" required>
+                <label for="businessid" id="businessid">Upload photos of your business</label>
+                <input type="file" placeholder="Upload photos of your business" name="businessid" required>
+                <!-- <input type="password" placeholder="Confirm Password"> -->
+                <!-- <input type="text" placeholder="Enter contact number of owner" required> -->
+
+                <!-- <select name="city" id="options">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Nashik">Nashik</option>
+                </select> -->
+
+                <button type="submit" id="next4">Submit</button>
+            </form>
+
+            <dvi class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small>Step 1</small></div>
+                <div class="step-col"><small>Step 2</small></div>
+                <div class="step-col"><small>Step 3</small></div>
+                <div class="step-col"><small>Step 4</small></div>
+            </dvi>
+        </div>
+    </div>
+
+    <script>
+        var form1 = document.getElementById("form1");
+        var form2 = document.getElementById("form2");
+        var form3 = document.getElementById("form3");
+        var form4 = document.getElementById("form4");
+
+        var next1 = document.getElementById("next1");
+        var next2 = document.getElementById("next2");
+        var next3 = document.getElementById("next3");
+        var next4 = document.getElementById("next4");
+
+        var progress = document.getElementById("progress")
+
+        next1.onclick = function(){
+            form1.style.left = "-450px";
+            form2.style.left = "40px";
+            progress.style.width = "150px"
+        }
+
+        next2.onclick = function(){
+            form2.style.left = "-450px";
+            form3.style.left = "40px";
+            progress.style.width = "270px"
+        }
+
+        next3.onclick = function(){
+            form3.style.left = "-450px";
+            form4.style.left = "40px";
+            progress.style.width = "370px"
+        }
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./business.js"></script>
+    <script src="./form2.js"></script>
+    <!-- <script src="./form3.js"></script>
+    <script src="./form4.js"></script>  -->
+
+    <div class="footer">
+    <div class="foot1">
+        <p class="foot1_logo">InfoDiary</p>
+        <p class="foot1_text">We`re growing a buisiness that will bridge the gap between who wants work and who
+            wants worker </p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="foot2">
+        <p class="foot2_title">Helpful Links</p>
+        <div class="foot2_helpful_links">
+            <ul>
+                <li><a href="newmain.html" style="color: #00A5E0;">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="select.html">Services</a></li>
+                <!-- <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Employees</a></li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="foot3">
+        <p class="foot3_title">Contact info</p>
+        <div class="foot3_content">
+            <ul class="foot3_content1">
+                <li><i class="fa-solid fa-location-dot"></i></li>
+                <li>Survey no. 12, 13, Opp. Hypercity Mall, Kasarwadavali, Ghodbunder road, Thane - 400615</li>
+            </ul>
+            <ul class="foot3_content2">
+                <li><i class="fa-solid fa-phone"></i></li>
+                <li>+91 9820936633</li>
+            </ul>
+            <ul class="foot3_content3">
+                <li><i class="fa-solid fa-envelope"></i></li>
+                <li>sarthak4042@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

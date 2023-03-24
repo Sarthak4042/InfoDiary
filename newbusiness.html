@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoDiary-Add My Business</title>
+    <link rel="stylesheet" href="newbusiness.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <!-- <script src="https://apis.mapmyindia.com/advancedmaps/v1/8bf6e0b630452cf09a356a2f29163b4c/map_load?v=1.5"></script> -->
+</head>
+
+<body>
+
+    <header>
+        <!-- <i class="fa-solid fa-user fa-2x"></i> -->
+        <nav>
+            <h1>INFODIARY</h1>
+            <img src="LOGO2.png" height="50px" width="80px">
+        </nav>
+    </header>
+
+    <div class="secondhalf"></div>
+
+    <div class="register">
+        <div class="container">
+            <form id="form1">
+                <h2>One step closer expanding your business!!<br><br>Fill the details to register your business</h2>
+                <input type="text" placeholder="Enter Your Business Name" id="name" required>
+                <input type="password" placeholder="Enter Password" id="password" required>
+                <input type="password" placeholder="Confirm Password" id="confirm" required>
+
+                <select name="options" id="services" required>
+                    <option value="Air-Conditioner Repairs">Air-Conditioner Repairs</option>
+                    <option value="Car Service Centers">Car Service Centers</option>
+                    <option value="Educational Institutes">Educational Institutes</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Foods and Restaurants">Foods and Restaurants</option>
+                    <option value="Gyms and Fitness Centers">Gyms and Fitness Centers</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Groceries">Groceries</option>
+                    <option value="Hospitals">Hospitals</option>
+                </select>
+
+                <input type="text" placeholder="Enter address of your business" id="address" required>
+
+                <input type="text" placeholder="Enter pincode of your business" id="pincode" required>
+
+                <select name="city" id="city">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Nashik">Nashik</option>
+                </select>
+
+                <input type="text" placeholder="Enter name of the owner" id="ownerid" required>
+
+                <input type="password" placeholder="Create Password" id="opass" required>
+
+                <input type="text" placeholder="Enter contact number of owner" id="ocontact" required>
+
+                <h2 id="last">One last step to get your business going!!</h2>
+
+                <label for="ownerid" id="id">Upload owner's photo ID proof</label>
+
+                <input type="file" placeholder="Upload owner's photo ID proof" name="ownerid" id="ownerphoto" required>
+
+                <label for="businessid" id="photoid">Upload photos of your business</label>
+
+                <input type="file" placeholder="Upload photos of your business" name="businessid" id="businessid"required>
+
+
+                <button type="submit" id="next1">Submit</button>
+            </form>
+
+
+        </div>
+    </div>
+
+    <!-- <div id="myModal" class="modal">
+        <div class="modal-content">
+            <img src="status.png" id="status">
+            <p class="info">CONGRATULATIONS !!! <br>We have received your request successfully. <br>Your business will be added to the respective category upon successful verification of the details provided by you.<br>THANKS FOR CHOOSING INFODDIARY.</p>
+            <a href="newmain.html">
+              <span class="close">&times;</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("next1");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+          modal.style.display = "block";
+        }
+        span.onclick = function () {
+          modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script> -->
+
+      <script>
+        document.getElementById("next1").onclick = function () {
+            let allAreFilled = true;
+            document.getElementById("form1").querySelectorAll("[required]").forEach(function (i) {
+                if (!allAreFilled) return;
+                if (i.type === "radio") {
+                    let radioValueCheck = false;
+                    document.getElementById("form1").querySelectorAll(`[name=${i.name}]`).forEach(function (r) {
+                        if (r.checked) radioValueCheck = true;
+                    })
+                    allAreFilled = radioValueCheck;
+                    return;
+                }
+                if (!i.value) { allAreFilled = false; return; }
+            })
+            if (!allAreFilled) {
+                alert('Fill all the fields');
+            }
+        };
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./business.js" type="module"></script>
+
+    <div class="footer">
+        <div class="foot1">
+            <p class="foot1_logo">InfoDiary</p>
+            <p class="foot1_text">We`re growing a buisiness that will bridge the gap between who wants work and who
+                wants worker </p>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="foot2">
+            <p class="foot2_title">Helpful Links</p>
+            <div class="foot2_helpful_links">
+                <ul>
+                    <li><a href="newmain.html" style="color: #00A5E0;">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="select.html">Services</a></li>
+                    <!-- <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contracts</a></li>
+                        <li><a href="#">Employees</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="foot3">
+            <p class="foot3_title">Contact info</p>
+            <div class="foot3_content">
+                <ul class="foot3_content1">
+                    <li><i class="fa-solid fa-location-dot"></i></li>
+                    <li>Survey no. 12, 13, Opp. Hypercity Mall, Kasarwadavali, Ghodbunder road, Thane - 400615</li>
+                </ul>
+                <ul class="foot3_content2">
+                    <li><i class="fa-solid fa-phone"></i></li>
+                    <li>+91 9820936633</li>
+                </ul>
+                <ul class="foot3_content3">
+                    <li><i class="fa-solid fa-envelope"></i></li>
+                    <li>sarthak4042@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

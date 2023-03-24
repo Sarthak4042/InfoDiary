@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoDiary-Restaurants</title>
+    <link rel="stylesheet" href="table.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- <i class="fa-solid fa-user fa-2x"></i> -->
+        <nav>
+            <h1>INFODIARY</h1>
+
+        </nav>
+    </header>
+
+    <section class="background firstsection">
+        <div class="box-main">
+            <div class="secondhalf">
+            </div>
+        </div>
+
+        <ul>
+            <li class="list active" data-filter="All">All</li>
+            <li class="list" data-filter="Mumbai">Mumbai</li>
+            <li class="list" data-filter="Pune">Pune</li>
+            <li class="list" data-filter="Nashik">Nashik</li>
+            <li class="list" data-filter="Nagpur">Nagpur</li>
+
+        </ul>
+
+        <div class="product">
+            <div class="itembox Mumbai">
+                <div class="cafe">
+                    <img src="cafe.png" class="alibaba">
+                    <h1>Alibaba Cafe (The King Of Thaal) </h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Shop No 2, Markaz View Building, S V Road, Jogeshwari West, Mumbai - 400102, Next
+                        to Shah
+                        Piles Clinic</p>
+                    <a href="https://g.page/alibaba-cafe-mumbai?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">500 - 1000</p>
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="number">07947471140</p>
+                    <p class="time">Opens at 12:30pm</p>
+                    <i class="fa-solid fa-location-dot" style="top: -330px;"></i>
+                    <button type="button" id="myBtn" class="book">Book Table</button>
+                </div>
+                <hr>
+
+                <div class="tribe">
+                    <img src="tribe.png" class="social">
+                    <h1>The Social tribe</h1>
+                    <!-- <img src="tribe_ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Jasawanti Allied Business Centre, Ramchandra Lane Extension Road, Malad West,
+                        Mumbai -
+                        400064,<br> Next to Hotel Khwaishh Presidency</p>
+                    <i class="fa-solid fa-location-dot" style="top: -210px;"></i>
+                    <a href="https://goo.gl/maps/SZSwhQeSM1MZ2FFb9">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">1000 - 2000</p>
+                    <button type="button" id="mynewBtn" class="book" style="top: -240px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07947317729</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="khao">
+                    <img src="khao.png" class="social">
+                    <h1>Khao Piyo</h1>
+                    <!-- <img src="khao-ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Plot No 373, Ground Floor, Lotia Palace Junction, Linking Road, Khar West, Mumbai
+                        -
+                        400052, Opposite Citibank</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/khao-piyo-khar?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">500 - 1000</p>
+                    <button type="button" id="myfavBtn" class="book" style="top: -240px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07947184523</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="pizza">
+                    <img src="pizza.png" class="social">
+                    <h1>Pizza By The Bay</h1>
+                    <!-- <img src="pizza_ratings.PNG" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">143, Soona Mahal, Marine Drive, Mumbai - 400020, Opposite Baskin Robbins Ice
+                        Cream
+                        Parlour & Ambassador Hotel </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/WbP1QMaRP5Fm9ijeA">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">1000 - 2000</p>
+                    <button type="button" id="myhotBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 22843646, 022 22856115, 022 22820883, 91 7718838749</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+                </div>
+                <hr>
+
+                <div class="britania">
+                    <img src="britania.png" class="social">
+                    <h1>Britannia & Company Restaurant</h1>
+                    <!-- <img src="pizza_ratings.PNG" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Wakefield House, 11, Sprott Road, Ballard Estate, Mumbai - 400001, Opposite New
+                        Custom
+                        House, Near Grand Hotel </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/1sduyeTeYBgoHL2C7">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">500 - 1000</p>
+                    <button type="button" id="myhotelBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 22615264, 022 30225264</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="bbc">
+                    <img src="bbc.png" class="social">
+                    <h1>British Brewing Company (Viviana Mall)</h1>
+                    <!-- <img src="bbc_ratings.PNG" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">G 46/47, Ground Floor, Viviana Mall, Eastern Express Highway, Thane West, Thane -
+                        400601,<br> Near Jupiter Hospital, Majiwada</p>
+                    <i class="fa-solid fa-location-dot" style="top: -210px;"></i>
+                    <a href="https://goo.gl/maps/ZGRMhC1LzQUY5atG8">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">1000 - 2000</p>
+                    <button type="button" id="mybritishBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 22615264, 022 30225264</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="sodabottle">
+                    <img src="soda.png" class="social">
+                    <h1>Soda Bottle Opener Wala</h1>
+                    <!-- <img src="pizza_ratings.PNG" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Viviana Mall, Eastern Express Highway, Majiwada, Thane - 400608, Near Jupiter
+                        Hospital
+                    </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/GHs11JKbJjxhFfRf9">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">1000 - 2000</p>
+                    <button type="button" id="mysodaBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">+91 9930437497, +91 8451905404, +91 7208871561</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="irish">
+                    <img src="irish.png" class="social">
+                    <h1>The Irish House</h1>
+                    <!-- <img src="pizza_ratings.PNG" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Viviana Mall, 1st Floor, Eastern Express Highway, Thane West, Thane - 400601,
+                        Besides
+                        Jupiter Hospital</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/6K8ToPNDJjnCgMUR6">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">1000 - 2000</p>
+                    <button type="button" id="myirishBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 61701400, +91 7045911801</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+
+
+                </div>
+                <hr>
+
+                <div class="poptates">
+                    <img src="poptates.png" class="social">
+                    <h1>Pop Tate's</h1>
+                    <!-- <img src="popratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Shop No 1, 4th Floor, Korum Mall, Mangal Pande Road, Thane West, Thane - 400601,
+                        Eastern
+                        Express Highway,<br>Near Cadbury Junction</p>
+                    <i class="fa-solid fa-location-dot" style="top: -210px;"></i>
+                    <a href="https://g.page/PopTates-Korum-Mall?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">500 - 1000</p>
+                    <button type="button" id="mypopBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 66737987, 022 66737988, 022 49749885, +91 8828105745, +91 8291823484</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="persian">
+                    <img src="persian.png" class="social">
+                    <h1>Persian Darbar</h1>
+                    <!-- <img src="popratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Moray Mahal, Linking Road, Bandra West, Mumbai - 400050, Next to Shoppers Stop
+                    </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/B7sH9uuqhPJyxoe46">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">500 - 1000</p>
+                    <button type="button" id="mypersianBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07947331768</p>
+                    <i class="fa-solid fa-phone" style="top: -310px;"></i>
+
+
+                </div>
+                <hr>
+
+                <div class="pot">
+                    <img src="pot.png" class="social">
+                    <h1>Pot Pourri Midc Rabale</h1>
+                    <!-- <img src="pot_ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <!-- <h3 class="experience">Visited this place? Rate your experience</h3> -->
+                    <p class="address">The Monarch, PAP P 352 to 361, MIDC Industrial Area, Rabale Midc, Navi Mumbai -
+                        400701,
+                        The Monarch Hotel </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/FLMD1YXUFsvtTBoi9">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">1000 - 2000</p>
+                    <button type="button" id="mypotBtn" class="book" style="top: -220px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07942600246</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+
+
+                </div>
+                <hr>
+
+                <div class="yellow">
+                    <img src="yellow.png" class="social">
+                    <h1>The Yellow Chilli</h1>
+                    <!-- <img src="bbc_ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <!-- <h3 class="experience">Visited this place? Rate your experience</h3> -->
+                    <p class="address">2nd Floor, Star Mall, N C Kelkar Marg, Dadar West, Mumbai - 400028, Near Sena
+                        Bhavan,
+                        Next to Shivaji Mandir Auditorium</p>
+                    <!-- <i class="fa-solid fa-location-dot" style="top: -200px;"></i> -->
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/vtfFvqYTjsN8GBuT7">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">1000 - 2000</p>
+                    <button type="button" id="myyellowBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 24365563, 022 24365564, +91 9833920003</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="atrangi">
+                    <img src="atrangi.png" class="social">
+                    <h1>The Atrangii House Sky Lounge</h1>
+                    <!-- <img src="popratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Fairmount, 4th Floor, Plot No 4 & 6, Palm Beach Raod, Sanpada Sector 17, Navi
+                        Mumbai - 400703, Above Star Bazar Supermarket</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/kwF1HQQHAMV4XGEo7">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">1000 - 2000</p>
+                    <button type="button" id="myatrangiBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07947190046</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+
+                </div>
+                <hr>
+
+                <div class="tiara">
+                    <img src="tiara.png" class="social">
+                    <h1>Tiara (Meluha The Fern An Ecotel Hotel)</h1>
+                    <!-- <img src="pizza_ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O Meluha The Fern An Ecotel Hotel, Lobby Level, Central Avenue, Powai, Mumbai -
+                        400076, Hiranandani Gardens, Near Haiko Market</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/mCKJAkSbJdBWiePz7">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mytiaraBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 25755555, 022 42611111</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="lake">
+                    <img src="lake.png" class="social">
+                    <h1>Lake View Cafe(The Westin Powai,Mumbai)</h1>
+                    <!-- <img src="lake_ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O The Westin Mumbai Powai, 2/3 B, Powai, Mumbai - 400087, Near Chinmayanand
+                        Ashram, Powai, Mumbai</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/lake-view-cafe?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mylakeBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 66927550, 022 66927777</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+                </div>
+                <hr>
+
+                <div class="sunken">
+                    <img src="sunken.png" class="social">
+                    <h1>The Sunken Bar (The Retreat Hotel & Convention Centre)</h1>
+                    <!-- <img src="sunken_rating.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O The Retreat Hotel & Convention Centre, Madh Marve Road, Malad West, Mumbai -
+                        400095, Near Erangal Beach, Madh Island</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/MU66AvmYEQwRAD537">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mysunkenBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 50868686, 022 28813500, 022 61318585</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+                </div>
+                <hr>
+
+                <div class="tra">
+                    <img src="tra.png" class="social">
+                    <h1>Trattoria (President Mumbai)</h1>
+                    <!-- <img src="sunken_rating.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O President Mumbai, 90, G D Somani Road, Cuffe Parade-colaba, Mumbai - 400005,
+                        Near World Trade Centre, Next to Chartered Accountant Institute</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/oCCFS26LAV23qBAT7">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mytraBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 66650971, 022 66650808, 022 66011825</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+                </div>
+                <hr>
+
+                <div class="seven">
+                    <img src="seven.png" class="social">
+                    <h1>Seven Kitchens (The St Regis Mumbai)</h1>
+                    <!-- <img src="ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O The St Regis Mumbai, 9th Mezanine, Senapti Bapat Marg, Lower Parel, Mumbai -
+                        400013, High Street Phoenix </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/eJkxxewnnmGsj5oq9">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mysevenBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 61628000, 022 61628422, 022 61736131</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="jyran">
+                    <img src="jyran.png" class="social">
+                    <h1>Jyran Tandoor Dining & Lounge (Sofitel Luxury Hotel) </h1>
+                    <!-- <img src="ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O Sofitel Luxury Hotel, C 57, Block G, 4th Floor, Bandra Kurla Complex-bandra
+                        East, Mumbai - 400051, Opposite Trident Hotel</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/V1Qy3264yMeZZjZt5">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="myjyranBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 61175000, 022 61175131, +91 9167391130</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+                </div>
+                <hr>
+
+                <div class="peshwa">
+                    <img src="peshwa.png" class="social">
+                    <h1>The Peshwa Pavilion (ITC Maratha Hotel)</h1>
+                    <!-- <img src="peshwa_ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O ITC Maratha Hotel, Sahar Airport Road, Sahar-andheri East, Mumbai - 400099
+                    </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/7ZpJEVbReKRgj3RN9">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mypeshwaBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 28303030, 022 40341877, 022 50645770</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="baluchi">
+                    <img src="baluchi.png" class="social">
+                    <h1>Baluchi (The Lalit Hotel)</h1>
+                    <!-- <img src="pizza_ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O The Lalit Hotel, Lobby Level, Sahar Airport Road, Andheri East, Mumbai -
+                        400059</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/RiBJuKBPsj6KUy6DA">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mybaluchiBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 30673142, 022 66992222, 022 61043142</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+
+                </div>
+                <hr>
+
+                <div class="namak">
+                    <img src="namak.png" class="social">
+                    <h1>Namak Restaurant (Sahara Star Hotel)</h1>
+                    <!-- <img src="lake_ratings.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O Sahara Star Hotel, Vile Parle East, Mumbai - 400099, Opposite Domestic
+                        Airport </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/bw4ByEB8Pi3BzFVZ6">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mynamakBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 39807444, 022 39895000, 022 39807172</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="tiqri">
+                    <img src="tiqri.png" class="social">
+                    <h1>Tiqri (Taj Santacruz)</h1>
+                    <!-- <img src="sunken_rating.png" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">C/O Taj Santacruz, Terminal 1c, Western Express Highway, Santacruz East, Mumbai -
+                        400055, <br>Near Chhatrapati Shivaji Domestic Airport</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/bWSZeRDYCyPobf8VA">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mytiqriBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">022 62115211, 022 62115502</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="find">
+                    <a href="https://maps.mapmyindia.com/restaurants/near/19.076090,72.877426">
+                        <button type="button" class="location">Click to find restaurants near you</button>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox Pune">
+                <div class="level">
+                    <img src="level.png" class="social">
+                    <h1>Level 5 Bistro & Bar</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">5th Floor, House of Nosh, CTS 1365, Gulawani Maharaj Road, Swaroop Society, Vakil
+                        Nagar, Erandwane, Pune, Maharashtra 411004</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/level5bistrobar?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mylevelBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07030933061</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="malaka">
+                    <img src="malaka.png" class="social">
+                    <h1>Malaka Spice</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Siddharth Chambers, Lane, off North Main Road, Koregaon Park, Pune, Maharashtra
+                        411001</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/tVebxtN22Rhh1zWGA">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mymalakaBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07507011226</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="little">
+                    <img src="little.png" class="social">
+                    <h1>Little Italy Restaurant</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Park Plaza, 465/C1, CTS - 1085, Ganeshkhind Rd, next to Central Mall,
+                        Shivajinagar, Pune, Maharashtra 411005</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/LittleItalyShivajinagarPune?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mylittleBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">09604295000</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="savya">
+                    <img src="savya.png" class="social">
+                    <h1>Savya Rasa</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Gera Serenity Building, CTS No. 15, near Starbucks Cafe, Koregaon Park, Pune,
+                        Maharashtra 411001</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/xXCYGUFx8dY7F4xr8  ">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mysavyaBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">09130095522</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="baan">
+                    <img src="baan.png" class="social">
+                    <h1>Baan Tao</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Hyatt, 88, Nagar Rd, adjacent to Aga Khan Palace, Palace View Society, Kalyani
+                        Nagar, Pune, Maharashtra 411006</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/3dYdfmg3s5MCkiSU9">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mybaanBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">08806751234</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="sorriso">
+                    <img src="sorriso.png" class="social">
+                    <h1>Sorriso</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Marriott Suites Pune, 81, Mundhwa Rd, Koregaon Park Annexe, Mundhwa, Pune,
+                        Maharashtra 411036</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/GXhYR1XgieSVBcKd8">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mysorrisoBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">08483876987</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="alto">
+                    <img src="alto.png" class="social">
+                    <h1>Alto Vino</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">JW Marriott, Senapati Bapat Rd, Laxmi Society, Model Colony, Shivajinagar, Pune,
+                        Maharashtra 411016</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/PjVhoDR2TQM9PiZR8">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="myaltoBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">02066833333</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="le">
+                    <img src="le.png" class="social">
+                    <h1>Le Plaisir</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Rajkamal Survey No. 759/125, Prabhat Road, Opposite Cox and Kings, Near, Kelkar
+                        Nursing Home, Pune, Maharashtra 411004</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/leplaisirpune?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="myleBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">020 65246526</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="three">
+                    <img src="three.png" class="social">
+                    <h1>Three Kitchens Restaurant and Bar</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">The Ritz-Carlton, Pune, Golf Course Square, Airport Rd, Pune, Maharashtra 411006
+                    </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/us2pDMGvvS9kGJAv8">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mythreeBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">02067675000</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="coriander">
+                    <img src="coriander.png" class="social">
+                    <h1>Coriander Kitchen</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star fa-2x"></span>
+                    <p class="address">Conrad, 7, Mangaldas Rd, Sangamvadi, Pune, Maharashtra 411001</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/xDNfzWLd4paJhwt67">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mycorianderBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">02067675000</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="ukiyo.png" class="social">
+                    <h1>Ukiyo</h1>
+                    <!-- <img src="lake_ratings.PNG" class="rating"> -->
+                    <!-- <h2>Star Rating</h2> -->
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">The Ritz-Carlton, Pune, Golf Course Square, Airport Rd, Pune, Maharashtra 411006
+                    </p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/FDTBJaj2C2VQpUXL6">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="myukiyoBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">02067675000 </p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="find">
+                    <a href="https://maps.mapmyindia.com/restaurants/near/19.076090,72.877426">
+                        <button type="button" class="location">Click to find restaurants near you</button>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox Nashik">
+                <div class="ukiyo">
+                    <img src="blvd.png" class="social">
+                    <h1>The Sidewalk at BLVD Nashik</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">BLVD, Ground Level, P20, Trimbak Road, Satpur MIDC, Next to Ginger Hotel, Nashik,
+                        Maharashtra 422007</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/TheSidewalkBLVD?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="myblvdBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">02536644000</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="callisto.png" class="social">
+                    <h1>The Callisto-Multi Cuisine Restaurant & Bar in Nashik</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Plot No.: 4,5, Survey No.: 50/2, Gangapur Rd, Anand Nagar, Anandvalli, Nashik,
+                        Maharashtra 422013</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/thecallistorestro?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mycallistoBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">02532954322</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="machan.png" class="social">
+                    <h1>The Machan's Nature's Bliss</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Right Canal Rd, near Motiwala College, Hanuman Nagar, Jalapur, Nashik,
+                        Maharashtra 422013</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/SsPEgTrYhyK7rjws6">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mymachanBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07821004239</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="barbaque.png" class="social">
+                    <h1>Barbeque Nation - Nashik - City Centre Mall</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">2nd Floor, City Centre Mall Sambaji Chowk, Lawate Nagar Banyan Square, Untwadi
+                        Rd, Nashik, Maharashtra 422009</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/BNNashik?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mybarbeBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">08069028738</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="gourmet.png" class="social">
+                    <h1>House of Gourmet</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Mumbai - Agra National Hwy, near Mumbai Naka, Renuka Nagar, Nashik, Maharashtra
+                        422001</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/v2u1oG3Kni21hHFX9">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mygourmetBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">09145555851</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="salt.png" class="social">
+                    <h1>Salt & Co</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Ground Floor,Janaki Heights, Jogging Track, opposite Krushi Nagar, Krishi Nagar,
+                        Nashik, Maharashtra 422005</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/salt-co-nashik?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mysaltBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">08268260011</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="aroma.png" class="social">
+                    <h1>Veg Aroma</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Gangapur Rd, Kale Nagar, Viveka Nand Nagar, Anandvalli, Nashik, Maharashtra
+                        422005</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/vegaromanasik?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="myaromaBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">02532339696</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="tcs.png" class="social">
+                    <h1>The Cobble Street (TCS)</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Gangapur-Savargaon Rd, Nashik, Maharashtra 422222</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/TheCobbleStreet?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mytcsBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">08380998099</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="majali.png" class="social">
+                    <h1>Majhali Fine-Dine Seafood Restaurant</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Majhali Fine-Dine Seafood Restaurant, College Rd, Kalpana Nagar, Nashik,
+                        Maharashtra 422005</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/ZLfX9YnHaUTZmYzv7">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mymajaliBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">02532317772</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="tales.png" class="social">
+                    <h1>Tales & Spirits Bistro</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Plot No. 33, opposite Westside Store, off College Road, Yeolekar Mala, Nashik,
+                        Maharashtra 422005</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/TnSNashik?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mytalesBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07028676777</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="find">
+                    <a href="https://maps.mapmyindia.com/restaurants/near/19.076090,72.877426">
+                        <button type="button" class="location">Click to find restaurants near you</button>
+                    </a>
+                </div>
+            </div>
+            <div class="itembox Nagpur">
+                <div class="ukiyo">
+                    <img src="nagpur1.png" class="social">
+                    <h1>Ruoofh 180º</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Level 6, Tuli Imperial, 37, Farm Land, Central Bazar Road, Ramdaspeth, Nagpur,
+                        Maharashtra 440010</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://g.page/ruoofh180?share">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mynagpurBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07028676777</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="zinq.png" class="social">
+                    <h1>ZINQ - Kitchen. Bar. Bistro</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">Chitnavis center, beside Hislop college, Dobhi Nagar, Civil Lines, Nagpur,
+                        Maharashtra 440001</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/NB9d23sxQfS31dP57">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="myzinqBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">08856051461</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="indiya.png" class="social">
+                    <h1>Indiya Oye Radisson Blu</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">7, Wardha Rd, New Sneh Nagar, Nagpur, Maharashtra 440015</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/vDeKJTNfXosTbQ1g9">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="myindiyaBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">08600018000</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="ukiyo">
+                    <img src="mint.png" class="social">
+                    <h1>Mint Leaf</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">37, Farm Land, Central Bazar Road, Ramdaspeth, Maharashtra 440010</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/cFgLwUY8PuiWG4uh8">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="mymintBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07126653701</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="haldiram">
+                    <img src="haldiram.png" class="social">
+                    <h1>Haldiram's Thaat Baat Restaurant</h1>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <span class="fa fa-star checked fa-2x"></span>
+                    <p class="address">125, Abhyankar Marg, Variety Square, Sitabuldi, Nagpur, Maharashtra 440012</p>
+                    <i class="fa-solid fa-location-dot" style="top: -200px;"></i>
+                    <a href="https://goo.gl/maps/67uVv5QuLhcd7yDU6">
+                        <button type="button" class="search">Get location on map</button>
+                    </a>
+                    <i class="fa-solid fa-indian-rupee-sign" style="left: 440px;"></i>
+                    <p class="price">Price Range:- </p>
+                    <p class="rat">Above 2000</p>
+                    <button type="button" id="haldiramBtn" class="book" style="top: -200px;">Book Table</button>
+                    <p class="time">Opens at 12:30pm</p>
+                    <p class="tribenum">07122540946</p>
+                    <i class="fa-solid fa-phone" style="top: -308px; left: 800px;"></i>
+
+                </div>
+                <hr>
+
+                <div class="find">
+                    <a href="https://maps.mapmyindia.com/restaurants/near/19.076090,72.877426">
+                        <button type="button" class="location">Click to find restaurants near you</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.list').click(function () {
+                    const value = $(this).attr('data-filter');
+                    if (value == 'all') {
+                        $('.itembox').show('1000');
+                    }
+                    else {
+                        $('.itembox').not('.' + value).hide('1000');
+                        $('.itembox').filter('.' + value).show('1000');
+                    }
+                })
+
+                $('.list').click(function () {
+                    $(this).addClass('active').siblings().removeClass('active');
+                })
+            })
+
+        </script>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="tableform">
+                    <p>Fill the details to book you a table</p>
+                    <p class="custname">Step1.Enter Your Name</p>
+                    <input type="text" id="customername"required>
+                
+                    <p class="dat">Step2.Select Date:-</p>
+                    <input type="date" class="date" style="width: 450px; height: 50px;" id="date" required>
+                    <p class="pos">Step3.Select Time Slot</p>
+                    <select id="timeslots" required>
+                        <option value="1pm-3pm">1pm-3pm</option>
+                        <option value="3pm-5pm">3pm-5pm</option>
+                        <option value="5pm-8pm">5pm-8pm</option>
+                        <option value="8pm-11.30pm">8pm-11.30pm</option>
+                    </select>
+                    <p class="people">Step4.Select number of people </p>
+                    <select id="peoples" required>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="more than 10">more than 10</option>
+                    </select>
+                    <button class="mytable" type="submit" id="bookbtn">Book My Table</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mynewBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myfavBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myhotBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myhotelBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mybritishBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mysodaBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myirishBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mypopBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mypersianBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mypotBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myyellowBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myatrangiBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mytiaraBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mylakeBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mysunkenBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mytraBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mysevenBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myjyranBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mypeshwaBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mybaluchiBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mynamakBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mytiqriBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mylevelBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mymalakaBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mylittleBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mysavyaBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mybaanBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }   
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mysorrisoBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myaltoBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myleBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mythreeBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mycorianderBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myukiyoBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myblvdBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mycallistoBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mymachanBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mybarbeBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mygourmetBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mysaltBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myaromaBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mytcsBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mymajaliBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mytalesBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mynagpurBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myzinqBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myindiyaBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mymintBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("haldiramBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+        <script>
+            var btn = document.getElementById('bookbtn');
+            btn.addEventListener('click', function (e) {
+                e.preventDefault()
+                var name = document.getElementById('customername').value;
+                var date = document.getElementById('date').value;
+                var time = document.getElementById('timeslots').value;
+                var people = document.getElementById('peoples').value;
+                var body = 'Name:- ' + name + '<br/>Date:- ' + date + '<br/>Time Slot:- ' + time + '<br/>No.Of.People:- ' + people;
+                //var Image = new('logo2.png')
+
+                Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "infodiary2022@gmail.com",
+                    Password: "52B4FA29CFC2924E7246F7E21BCCF5E1D432",
+                    To: '20104116@apsit.edu.in',
+                    From: "infodiary2022@gmail.com",
+                    Subject: "InfoDiary Customer Table Reservation",
+                    Body: body
+                }).then(
+                    message => alert(message)
+                );
+            })
+
+        </script>
+    </section>
+
+    <script src="./table.js" type="module"></script>
+
+    <div class="footer">
+        <div class="foot1">
+            <p class="foot1_logo">InfoDiary</p>
+            <p class="foot1_text">We`re growing a buisiness that will bridge the gap between who wants work and who
+                wants worker </p>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="foot2">
+            <p class="foot2_title">Helpful Links</p>
+            <div class="foot2_helpful_links">
+                <ul>
+                    <li><a href="newmain.html" style="color: #00A5E0;">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="select.html">Services</a></li>
+                    <!-- <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Employees</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="foot3">
+            <p class="foot3_title">Contact info</p>
+            <div class="foot3_content">
+                <ul class="foot3_content1">
+                    <li><i class="fa-solid fa-location-dot"></i></li>
+                    <li>Survey no. 12, 13, Opp. Hypercity Mall, Kasarwadavali, Ghodbunder road, Thane - 400615</li>
+                </ul>
+                <ul class="foot3_content2">
+                    <li><i class="fa-solid fa-phone"></i></li>
+                    <li>+91 9136554957</li>
+                </ul>
+                <ul class="foot3_content3">
+                    <li><i class="fa-solid fa-envelope"></i></li>
+                    <li>sarthak4042@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

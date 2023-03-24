@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>SignUp</header>
+    <h5>Fill the details to register your account</h5>
+    <form id="form1">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" placeholder="Fullname" name="fullname" id="fullname" required>
+          <i class="icon fas fa-user"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" placeholder="Password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password can't be blank</div>
+      </div>
+
+      <div class="field contact">
+        <div class="input-area">
+            <input type="tel" placeholder="Contact Number" name="Contact" id="contact" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+            <i class="icon fas fa-phone"></i>
+            <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Contact Number can't be blank</div>
+      </div>
+
+      <div class="field address">
+        <div class="input-area">
+            <input type="email" placeholder="Email Address" name="address" id="email" required>
+            <i class="icon fas fa-address-book"></i>
+            <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Address can't be blank</div>
+      </div>
+
+      <div class="field dob">
+        <div class="input-area">
+            <input type="datetime-local" min="1940-01-01T00:00" max="2007-12-31T00:00" name="dob" id="dob" required>
+            <!-- <i class="icon fas fa-calender-day"></i> -->
+            <!-- <i class="error error-icon fas fa-exclamation-circle"></i> -->
+        </div>
+        <!-- <div class="error error-txt">Address can't be blank</div> -->
+      </div>
+      
+     
+      <input type="submit" value="Regsiter">
+
+
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <script src="./signup.js"></script>
+
+
+    
+  </div>
+  <style>
+    body {
+        background-image:url('bg.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .wrapper {
+      height: 600px;
+    }
+  </style>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body {
+        background-color: black;
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    }
+
+    .login_popup{
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+    }
+
+    .login_popup .box{
+        background-image:url('bg.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 0 10px;
+        width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+s
+    .login_popup .box .form{
+        padding: 40px 30px;
+    }
+
+    .login_popup .box .form h1{
+        color: rgb(10, 42, 70);
+        font-size: 30px;
+        margin: 0 0 30px;
+    }
+
+    .popup_input{
+        height: 45px;
+        margin-bottom: 30px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        font-size: 15px;
+        color: rgb(142, 142, 233);s
+    }
+
+    .btn{
+        width: 100%;
+        background-color: royalblue;
+    }
+
+
+    </style>
+<div class="login_popup" id="popup_form">
+    <div class="box">
+        <div class="form">
+            <!-- <div class="close" id="close_btn">&times;</div> -->
+            <h1>Login</h1>
+            <div class="form_group">
+                <input type="text" placeholder="Enter your email" class="popup_input">
+            </div>
+            <div class="form_group">
+                <input type="password" placeholder="Enter your password" class="popup_input">
+            </div>
+            <button class="btn">Login</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

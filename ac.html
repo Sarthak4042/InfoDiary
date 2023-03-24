@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoDiary</title>
+    <link rel="stylesheet" href="ac.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <!-- <i class="fa-solid fa-user fa-2x"></i> -->
+        <nav>
+            <h1>INFODIARY</h1>
+
+        </nav>
+    </header>
+
+    <section class="background firstsection">
+        <div class="box-main">
+            <div class="secondhalf">
+                <!-- <i class="icon fas fa-magnifying-glass"></i> -->
+                <!-- <input type="text" placeholder="search" style="font-size:large; width: 500px; position: relative; left: 500px; height: 50px; top: 30%;" > -->
+                <!-- <p>THINK.SEARCH.GET</p> -->
+                <!-- <h1>Your one-stop solution for all your day-to-day needs!!!</h1> -->
+            </div>
+        </div>
+
+        <div class="info">
+            <h1>Fill the details to book your AC repair, service or installation/uninstallation</h1>
+        </div>
+
+        <div class="service">
+            <h1>Services</h1>
+            <img src="acquote.png" class="quote1">
+            <button type="button" id="mynewBtn" class="book">Book Service</button>
+
+            <img src="acq.png" class="quote2">
+            <button type="button" id="myquoteBtn" class="book">Book Service</button>
+        </div>
+        <hr>
+
+        <div class="repair">
+            <h1>Repairs</h1>
+            <img src="repair1.png" class="repquo">
+            <button type="button" id="myrepBtn" class="book" style="top: -180px;">Book Service</button>
+
+            <img src="wndrep.png" class="wndrep">
+            <button type="button" id="mywndrepBtn" class="book" style="top: -220px;">Book Service</button>
+
+        </div>
+        <hr>
+
+        <div class="install">
+            <h1>Installation/Un-Installation</h1>
+            <img src="splt.png" class="splt">
+            <button type="button" id="myspltintBtn" class="book" style="top: -270px;">Book Service</button>
+
+            <img src="wndint.png" class="wndint">
+            <button type="button" id="mywndintBtn" class="book" style="top: -240px;">Book Service</button>
+
+            <img src="spltunint.png" class="spltunint">
+            <button type="button" id="myspltunintBtn" class="book" style="top: -290px;">Book Service</button>
+
+            <img src="wndunit.png" class="wndunit">
+            <button type="button" id="mywndunBtn" class="book" style="top: -250px;">Book Service</button>
+
+        </div>
+
+        
+
+
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <form action="booking.html" id="acrepairform">
+                    <!-- <span class="close">&times;</span> -->
+                    <p id="intro">Fill the details to book your service:-</p>
+                    <p class="ton">Select size of your AC</p>
+                    <select id="size" required>
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="1ton">1 Ton</option>
+                        <option value="1.5ton">1.5 Ton</option>
+                        <option value="2ton">2 Ton</option>
+                        <option value="2.5ton">2.5 Ton</option>
+                        <option value="3ton">3 Ton</option>
+                    </select>
+                
+                    <p class="age">How old is your AC?</p>
+                    <select id="old" required>
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="1year">1 Year</option>
+                        <option value="2year">2 Year</option>
+                        <option value="3year">3 Year</option>
+                        <option value="4year">4 Year</option>
+                        <option value="Older">Older than 4 years</option>
+                    </select>
+                
+                    <p class="day">Select Day</p>
+                    <input type="date" class="date" id="date" required>
+                
+                    <p class="pos">Select Time Slot</p>
+                    <select id="timeslots" required>
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="9am-12pm">9am-12pm</option>
+                        <option value="12pm-3pm">12pm-3pm</option>
+                        <option value="3pm-5pm">3pm-5pm</option>
+                        <option value="5pm-7pm">5pm-7pm</option>
+                    </select>
+                
+                    
+                    <input class="myservice" type="submit"></input>
+                    
+                    
+                
+                    <!-- <label class="address">Enter your address</label> -->
+                    <input id="address" name="address" placeholder="Enter Your Address" required>
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+                    <!-- <textarea id="address" name="address" rows="7" cols="10" required></textarea> -->
+                
+                    <!-- <button class="myservice" type="button">Book My Service</button> -->
+                    <span class="close">&times;</span>
+                </form>
+            </div>
+        </div>
+
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mynewBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myquoteBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myrepBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mywndrepBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myspltintBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mywndintBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myspltunintBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("mywndunBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <script src="./ac.js" type="module"></script>
+
+        
+
+
+    </section>
+
+    
+
+    <div class="footer">
+        <div class="foot1">
+            <p class="foot1_logo">InfoDiary</p>
+            <p class="foot1_text">We`re growing a buisiness that will bridge the gap between who wants work and who
+                wants worker </p>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="foot2">
+            <p class="foot2_title">Helpful Links</p>
+            <div class="foot2_helpful_links">
+                <ul>
+                    <li><a href="newmain.html" style="color: #00A5E0;">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="select.html">Services</a></li>
+                    <!-- <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Employees</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="foot3">
+            <p class="foot3_title">Contact info</p>
+            <div class="foot3_content">
+                <ul class="foot3_content1">
+                    <li><i class="fa-solid fa-location-dot"></i></li>
+                    <li>Survey no. 12, 13, Opp. Hypercity Mall, Kasarwadavali, Ghodbunder road, Thane - 400615</li>
+                </ul>
+                <ul class="foot3_content2">
+                    <li><i class="fa-solid fa-phone"></i></li>
+                    <li>+91 9136554957</li>
+                </ul>
+                <ul class="foot3_content3">
+                    <li><i class="fa-solid fa-envelope"></i></li>
+                    <li>sarthak4042@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>

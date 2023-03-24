@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial;
+      font-size: 17px;
+      padding: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: 0 -16px;
+    }
+
+    .col-25 {
+      -ms-flex: 25%;
+      flex: 25%;
+    }
+
+    .col-50 {
+      -ms-flex: 50%;
+      flex: 50%;
+    }
+
+    .col-75 {
+      -ms-flex: 75%;
+      flex: 75%;
+    }
+
+    .col-25,
+    .col-50,
+    .col-75 {
+      padding: 0 16px;
+    }
+
+    .container {
+      background-color: #f2f2f2;
+      padding: 5px 20px 15px 20px;
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+    }
+
+    input[type=text] {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    label {
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .icon-container {
+      margin-bottom: 20px;
+      padding: 7px 0;
+      font-size: 24px;
+    }
+
+    .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      width: 100%;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      color: #2196F3;
+    }
+
+    hr {
+      border: 1px solid lightgrey;
+    }
+
+    span.price {
+      float: right;
+      color: grey;
+    }
+
+
+    @media (max-width: 800px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+
+      .col-25 {
+        margin-bottom: 20px;
+      }
+    }
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 50px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      color: royalblue;
+      font-family: 'Segoe UI BLACK';
+      font-size: 30px;
+
+      /* position: relative; */
+      /* left: 200px; */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: royalblue;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      color: aliceblue;
+      font-family: 'Segoe UI BLACK';
+      align-items: center;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      position: relative;
+      top: -350px;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .close p {
+      color: royalblue;
+      font-family: 'Segoe UI BLACK';
+      font-size: 30px;
+      position: relative;
+      left: 150px;
+    }
+
+    .info {
+      font-family: 'Segoe UI BLACK';
+      color: aliceblue;
+      align-items: center;
+      position: relative;
+      left: 200px;
+    }
+
+    #status {
+      position: relative;
+      left: 450px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Checkout</h2>
+
+  <div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="#" style="padding: 25px;">
+
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email">
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address">
+              <label for="city"><i class="fa fa-institution"></i>Contact Number</label>
+              <input type="text" id="contact" name="city">
+
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" id="rzp-button1" value="Continue to checkout" class="btn">
+          <!-- <input type="submit" value="Pay Cash On Service" class="btn"> -->
+          <form action="success.html">
+            <input type="submit" id="cod" value="Pay Cash On Service" class="btn">
+          </form>
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <img src="status.png" id="status">
+              <p class="info">Your service has been booked successfully!!<br>Our Technician will contact you on the day
+                of service.</p>
+              <a href="ac.html">
+                <span class="close">&times;</span>
+              </a>
+            </div>
+          </div>
+
+          <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("cod");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+              modal.style.display = "block";
+            }
+            span.onclick = function () {
+              modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+
+          <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+          <script>
+            var options = {
+              "key": "rzp_test_LF9FUkrb4ZOXcs", // Enter the Key ID generated from the Dashboard
+              "amount": "54900", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+              "currency": "INR",
+              "name": "INFODIARY",
+              "description": "Test Transaction",
+              // "image": "https://example.com/your_logo",
+              "handler": function (response) {
+                console.log(response);
+              }
+            };
+            var rzp1 = new Razorpay(options);
+            document.getElementById('rzp-button1').onclick = function (e) {
+              rzp1.open();
+              e.preventDefault();
+            }
+          </script>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

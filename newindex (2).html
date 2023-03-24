@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="wrapper" id="signin">
+    <header>Login into your account</header>
+    <form action="#" id="signinform">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" placeholder="UserName" id="email">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" placeholder="Password" id="password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password can't be blank</div>
+      </div>
+      <!-- <div class="pass-txt"><a href="forgot.html">Forgot password?</a></div> -->
+      <!-- <a href="main.html"> -->
+      <input type="submit" value="Login" id="login_b">
+      <!-- <input type="button" value="Google" id="googlebtn"> -->
+      <span><button id="googlebtn">Google</button></span>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      
+    
+
+    </form>
+    <div class="sign-txt">Not yet member? <a href="signup.html">Signup now</a></div>
+  </div>
+
+  <script src="loginauthentication (2).js" type="module">
+  // <script src="googleauthentication.js" type="module">
+    
+
+
+  </script>
+
+  <script src="script.js" type="module"></script>
+
+
+
+  <style>
+    body {
+      background: url(bg.png) no-repeat center center fixed;
+      /* background-repeat: no-repeat; */
+      /* background-attachment: fixed; */
+      background-size: cover;
+    }
+
+    #googlebtn{
+      width: 320px;
+      border-radius: 10px;
+      height: 40px;
+      top: 100px;
+      border: none;
+      font-size: 20px;
+    }
+  </style>
+
+</body>
+
+</html>

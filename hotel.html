@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoDiary-Restaurant</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <script src="https://apis.mapmyindia.com/advancedmaps/v1/8bf6e0b630452cf09a356a2f29163b4c/map_load?v=1.5"></script>
+    <script
+        src="https://apis.mapmyindia.com/advancedmaps/api/lrFxI-iSEg-bksScpFAlj5r5joBRaY6jBMDtl5VKegP1iCBzfdMa73MhduSh_6LPfZ8RCfmlYA2VV-E47fMNs_VckJ3Y_37Y3PfxcfHSAl4=/map_sdk_plugins"></script>
+</head>
+
+<body>
+
+    <header>
+        <!-- <i class="fa-solid fa-user fa-2x"></i> -->
+        <nav>
+            <h1>INFODIARY</h1>
+
+        </nav>
+    </header>
+
+    <div class="secondhalf"></div>
+
+
+
+
+    <div id="map">
+        <!-- <iframe allow="geolocation" id="frame2" runat="server" frameborder="0" style="width:98.5vw; height:95vh;" src="
+        https://maps.mapmyindia.com/restaurants/near/27.2046,77.4977"></iframe> -->
+    </div>
+
+    <div class="find">
+        <a href="https://maps.mapmyindia.com/restaurants/near/28.5454,77.45445">
+        <button type="button" class="location">Click to find restaurants near you</button>
+        </a>
+    </div>
+
+    
+    <script>
+        var map = new MapmyIndia.Map("map", { center: [28.61, 77.23], zoomControl: true, hybrid: true, search: true, location: true });
+        // L.marker([28.61, 77.23]).addTo(map);
+    </script>
+
+
+
+
+
+    <div class="food">
+        <img src="bgfood.png" class="food" width="1500px">
+
+        <a href="table.html">
+            <button type="button" class="book"></button>
+        </a>
+
+        <a href="trending.html">
+            <button type="button" class="trending"></button>
+        </a>
+
+
+        <!-- <button type="button" class="order"></button>
+        <img src="tp.png" class="foodbg"> -->
+    </div>
+
+    <div class="footer">
+        <div class="foot1">
+            <p class="foot1_logo">WeCare</p>
+            <p class="foot1_text">We`re growing a buisiness that will bridge the gap between who wants work and who
+                wants worker </p>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="foot2">
+            <p class="foot2_title">Helpful Links</p>
+            <div class="foot2_helpful_links">
+                <ul>
+                    <li><a href="#" style="color: #00A5E0;">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Employees</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot3">
+            <p class="foot3_title">Contact info</p>
+            <div class="foot3_content">
+                <ul class="foot3_content1">
+                    <li><i class="fa-solid fa-location-dot"></i></li>
+                    <li>Survey no. 12, 13, Opp. Hypercity Mall, Kasarwadavali, Ghodbunder road, Thane - 400615</li>
+                </ul>
+                <ul class="foot3_content2">
+                    <li><i class="fa-solid fa-phone"></i></li>
+                    <li>+91 9136554957</li>
+                </ul>
+                <ul class="foot3_content3">
+                    <li><i class="fa-solid fa-envelope"></i></li>
+                    <li>sarthak4042@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+</html>
